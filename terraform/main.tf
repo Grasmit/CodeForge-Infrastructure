@@ -105,17 +105,6 @@ resource "azurerm_linux_virtual_machine" "password_app_linux_vm" {
         username="passwordAppAdmin"
         public_key = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
     }
-    
-    provisioner "remote-exec" {
-    inline = [
-      "sudo apt-get update",
-      "sudo apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release",
-      "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg",
-      "echo \"deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable\" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null",
-      "sudo apt-get update",
-      "sudo apt-get install -y docker-ce docker-ce-cli containerd.io"
-    ]
-  }
   }
 
 resource "azurerm_virtual_machine_extension" "password-app-containerd" {
@@ -126,8 +115,8 @@ resource "azurerm_virtual_machine_extension" "password-app-containerd" {
     type = "CustomScript"
     type_handler_version = "2.0"
 
-    setting = jsondecode({
-        fileUris = []
+    settings = jsonencode({
+        fileUris = ["https://github.com/Grasmit/infrastructure-as-a-code/blob/master/bash/run-app-image.sh"]
         commandToExecute = "bash run-app-image.sh"
     })
 }
