@@ -21,7 +21,7 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 git clone https://github.com/Grasmit/infrastructure-as-a-code.git /home/ubuntu/app
 
 #change directory to git hub repository
-cd /home/ubuntu/flask-app
+cd /home/ubuntu/app
 
 #Build Docker image
 docker build -t password-app
