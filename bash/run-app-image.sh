@@ -24,7 +24,7 @@ git clone https://github.com/Grasmit/infrastructure-as-a-code.git /home/ubuntu/a
 cd /home/ubuntu/app
 
 #Build Docker image
-docker build -t password-app
+docker build -t password-app .
 
 #run the docker container
 docker run -d --name app-container -p 80:3000 password-app
