@@ -66,9 +66,7 @@ Before you begin, ensure you have the following tools installed:
 Check out the Video for a walkthrough of the deployment process.
 Watch a demonstration of the deployment process:
 
-<video width="640" height="360" controls>
-  <source src="https://raw.githubusercontent.com/Grasmit/infrastructure-as-a-code/master/demo/IaC_demo.mp4" type="video/mp4">
-</video>
+[![Watch the demo](https://github.com/Grasmit/infrastructure-as-a-code/master/IaC_demo.mp4)](https://github.com/Grasmit/infrastructure-as-a-code/master/IaC_demo.mp4)
 
 ## **Notes**
 
