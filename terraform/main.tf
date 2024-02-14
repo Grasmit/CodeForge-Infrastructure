@@ -116,7 +116,7 @@ resource "azurerm_virtual_machine_extension" "password-app-containerd" {
     type_handler_version = "2.0"
 
     settings = jsonencode({
-        fileUris = ["https://github.com/Grasmit/infrastructure-as-a-code/blob/master/bash/run-app-image.sh"]
+        fileUris = ["https://raw.githubusercontent.com/Grasmit/infrastructure-as-a-code/master/bash/run-app-image.sh"]
         commandToExecute = "bash run-app-image.sh"
     })
 }
