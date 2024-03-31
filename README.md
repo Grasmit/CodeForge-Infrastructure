@@ -60,14 +60,6 @@ Before you begin, ensure you have the following tools installed:
         terraform destroy
         ```
         
-
-### **Demo**
-
-Check out the Video for a walkthrough of the deployment process.
-Watch a demonstration of the deployment process:
-
-[![Watch the demo](https://github.com/Grasmit/infrastructure-as-a-code/master/IaC_demo.mp4)](https://github.com/Grasmit/infrastructure-as-a-code/master/IaC_demo.mp4)
-
 ## **Notes**
 
 - Ensure that the Azure resource group, virtual network, and other resources are appropriately configured in the Terraform files.
