@@ -76,6 +76,7 @@ resource "azurerm_network_interface_security_group_association" "password_app_ni
     network_security_group_id = azurerm_network_security_group.password_app_nsg.id
 }
 
+/*
 resource "azurerm_linux_virtual_machine" "password_app_linux_vm" {
     name = "password-app-linux-vm"
     resource_group_name = azurerm_resource_group.password_app_rg.name
@@ -120,3 +121,4 @@ resource "azurerm_virtual_machine_extension" "password-app-containerd" {
         commandToExecute = "bash run-app-image.sh"
     })
 }
+*/
